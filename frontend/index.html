@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI 미니 채팅봇</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link href="https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css" rel="stylesheet" type="text/css" />
+  
+</head>
+<body>
+  <div class="chat-wrapper">
+    <!-- 상단 헤더 -->
+    <div class="chat-header">
+      <div class="chat-title">AI 미니 채팅봇</div>
+      <select id="personaSelect" class="persona-select">
+        <option value="kind_ta">친절한 선배</option>
+        <option value="cold_engineer">무뚝뚝한 공대생</option>
+        <option value="excited_friend">과몰입 친구</option>
+      </select>
+    </div>
+
+    <!-- 감정 상태 바 -->
+    <div class="status-bar">
+      <span class="status-title" id="statusTitle">나의 감정 상태</span>
+      <span class="status-emoji" id="statusEmoji">😐</span>
+      <span class="status-text" id="statusText">중립</span>
+    </div>
+
+    <!-- 채팅 영역 -->
+    <div class="chat-body" id="chatBody">
+      <!-- 첫 안내 메시지 -->
+      <div class="message-row bot">
+        <div class="bubble bot">안녕! 👋
+위에서 말투를 선택하고, 아래에 아무 말이나 입력해봐.
+너의 말에서 감정을 분석해서 반응해볼게!</div>
+      </div>
+    </div>
+
+    <!-- 입력 영역 -->
+    <div class="chat-footer">
+      <input
+        type="text"
+        id="messageInput"
+        class="input-message"
+        placeholder="메시지를 입력하고 Enter 또는 전송 버튼을 눌러보세요."
+      />
+      <button id="sendBtn" class="send-btn">전송</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
