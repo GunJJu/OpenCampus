@@ -39,7 +39,7 @@ function addMessageBubble(text, sender = "user") {
 function updateSentimentStatus(data) {
   if (data.sentiment_emoji && data.sentiment_label) {
     statusEmoji.textContent = data.sentiment_emoji;
-    statusText.textContent = `현재 감정: ${data.sentiment_label}`;
+    statusText.textContent = `${data.sentiment_label}`;
   }
 }
 
